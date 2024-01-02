@@ -1,5 +1,5 @@
 ---
-import display from "../content/images/owenkg.JPG";
+// import display from "../content/images/owenkg.JPG";
 
 interface Props {
 	title: string;
@@ -10,7 +10,7 @@ interface Props {
 const {
 	title,
 	description = "Fullstack Developer",
-	image = display,
+	// image = "/images/owenkg.JPG",
 } = Astro.props;
 ---
 
@@ -27,7 +27,7 @@ const {
 			property="og:description"
 			content="This is a really great blog post about all sorts of awesome things."
 		/>
-		<meta property="og:image" content={image} />
+		<meta property="og:image" content="/images/owenkg.JPG" />
 		<meta property="og:url" content="https://owenkg.github.io/portfolio" />
 		<meta property="og:type" content="portforlio" />
 		<meta property="og:locale" content="en_US" />

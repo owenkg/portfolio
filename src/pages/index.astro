@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/layout.astro";
 import { Image } from "astro:assets";
-import display from "../content/images/owenkg.JPG";
+// import display from "../content/images/owenkg.JPG";
 ---
 
 <Layout title="George Owen Kivumbi">
@@ -13,8 +13,10 @@ import display from "../content/images/owenkg.JPG";
 				<div class="grid grid-cols-2">
 					<div class="-orange-500 flex justify-center">
 						<Image
-							src={display}
+							src="/images/owenkg.JPG"
 							alt="display_picture"
+							width={40}
+							height={40}
 							class="inline-block w-40 rounded-full ring-2 ring-white"
 						/>
 					</div>

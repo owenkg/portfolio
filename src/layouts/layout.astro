@@ -1,0 +1,43 @@
+---
+import display from "../content/images/owenkg.JPG";
+
+interface Props {
+	title: string;
+	description?: string;
+	image?: string;
+}
+
+const {
+	title,
+	description = "Fullstack Developer",
+	image = display,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<!-- <meta name="generator" content={Astro.generator} /> -->
+		<meta property="og:title" content={title} />
+		<meta
+			property="og:description"
+			content="This is a really great blog post about all sorts of awesome things."
+		/>
+		<meta property="og:image" content={image} />
+		<meta property="og:url" content="https://owenkg.github.io/portfolio" />
+		<meta property="og:type" content="portforlio" />
+		<meta property="og:locale" content="en_US" />
+		<meta
+			property="og:site_name"
+			content="George Owen Kivumbi | Fullstack Web Developer"
+		/>
+		<title>{title}</title>
+	</head>
+	<body class="min-h-screen bg-slate-200">
+		<slot />
+	</body>
+</html>

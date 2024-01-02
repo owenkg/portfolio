@@ -1,0 +1,29 @@
+---
+const { content } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content="Fullstack Web Developer" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>{content.title}</title>
+		<meta property="og:title" content={content.title} />
+		<meta
+			property="og:description"
+			content="This is a really great blog post about all sorts of awesome things."
+		/>
+		<meta property="og:image" content="https://example.com/image.jpg" />
+		<meta
+			property="og:url"
+			content="https://example.com/my-awesome-blog-post"
+		/>
+		<meta property="og:type" content="article" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:site_name" content="My Awesome Blog" />
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>

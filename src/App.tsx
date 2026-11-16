@@ -296,8 +296,8 @@ export default function App() {
               <br />
               <span>that actually works.</span>
             </h2>
-            <a href="mailto:owenkg1@outlook.com" className="email-link label">
-              owenkg1@outlook.com <span aria-hidden="true">→</span>
+            <a href="mailto:gokivumbi@gmail.com" className="email-link label">
+              gokivumbi@gmail.com <span aria-hidden="true">→</span>
             </a>
 
             <div className="contact-meta">

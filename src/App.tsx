@@ -69,7 +69,7 @@ export default function App() {
 
   return (
     <>
-      {/* Hidden SVG filters */}
+      {/* Hidden SVG filters used by role-stamp and focus-stamp */}
       <svg className="svg-filters" aria-hidden="true">
         <defs>
           <filter id="stamp-distress" x="-5%" y="-5%" width="110%" height="110%">
@@ -94,14 +94,14 @@ export default function App() {
       {/* ─── NAV ─── */}
       <header className="hero grain">
         <nav className="nav shell">
+          <a href="/" className="monogram label" aria-label="George Kivumbi">
+            GK
+          </a>
           <div className="nav-links">
             <a href="#work">Work</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
           </div>
-          <a href="/" className="monogram label" aria-label="George Owen Kivumbi">
-            GK
-          </a>
           <div className="availability label">
             <span className="status-dot" aria-hidden="true" />
             Open to remote QA roles
@@ -116,26 +116,25 @@ export default function App() {
             <span className="label">SDET</span>
           </aside>
 
-          <main>
+          <div>
             <div className="hero-title-wrap">
               <div className="hero-title-block">
                 <p className="eyebrow label">Hello, I'm</p>
                 <h1 className="hero-title">
-                  George Owen
+                  George
                   <br />
                   <span>Kivumbi.</span>
                 </h1>
               </div>
 
-              {/* Newspaper cutout portrait */}
+              {/* Newspaper cutout portrait — hidden on mobile via CSS */}
               <div className="hero-portrait-wrap" aria-hidden="true">
                 <img
                   src="portfolio_photo_clean.png"
-                  alt="George Owen Kivumbi"
+                  alt="George Kivumbi"
                   width="600"
                   height="600"
                 />
-                <p className="hero-portrait-caption">George Owen Kivumbi · SDET</p>
               </div>
             </div>
 
@@ -154,7 +153,7 @@ export default function App() {
                 teams shipping software that matters across East Africa.
               </p>
             </div>
-          </main>
+          </div>
         </div>
 
         <span className="scroll-note label" aria-hidden="true">
@@ -178,9 +177,9 @@ export default function App() {
             </p>
           </div>
 
-          <div className="project-grid" role="list">
+          <div className="project-grid">
             {projects.map((p) => (
-              <article key={p.index} className="project-card" role="listitem">
+              <article key={p.index} className="project-card">
                 <div className="project-top">
                   <span className="label">{p.index}</span>
                   <span className="project-mark" aria-hidden="true">
@@ -222,11 +221,7 @@ export default function App() {
           </div>
 
           <div className="about-grid">
-            <div
-              className="portrait-mark"
-              role="presentation"
-              aria-hidden="true"
-            >
+            <div className="portrait-mark" role="presentation" aria-hidden="true">
               <span>GK</span>
               <small>Est. 2021</small>
             </div>
@@ -274,9 +269,9 @@ export default function App() {
             </p>
           </div>
 
-          <div className="skills-grid" role="list">
+          <div className="skills-grid">
             {skills.map((group) => (
-              <div key={group.id} className="skill-group" role="listitem">
+              <div key={group.id} className="skill-group">
                 <div className="skill-label label">
                   <span aria-hidden="true">{group.id}</span>
                   {group.label}
@@ -309,23 +304,36 @@ export default function App() {
             </a>
 
             <div className="contact-meta">
-              <p>Mbarara, Uganda · EAT (UTC+3)</p>
-              <nav className="social-links label" aria-label="Social links">
+              <div className="contact-meta-left">
+                <p>Mbarara, Uganda · EAT (UTC+3)</p>
+                <p className="sdet-full">Software Development Engineer in Test</p>
+              </div>
+              <div className="contact-meta-right">
                 <a
-                  href="https://github.com/owenkg"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="george-kivumbi-sdet-resume.pdf"
+                  download="George Kivumbi - SDET Resume 2026.pdf"
+                  className="resume-download label"
+                  aria-label="Download George Kivumbi's SDET resume"
                 >
-                  GitHub
+                  Download résumé <span aria-hidden="true">↓</span>
                 </a>
-                <a
-                  href="https://www.linkedin.com/in/george-owen-kivumbi-17985616b/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  LinkedIn
-                </a>
-              </nav>
+                <nav className="social-links label" aria-label="Social links">
+                  <a
+                    href="https://github.com/owenkg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/george-owen-kivumbi-17985616b/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    LinkedIn
+                  </a>
+                </nav>
+              </div>
             </div>
           </div>
         </div>
@@ -334,7 +342,7 @@ export default function App() {
       {/* ─── FOOTER ─── */}
       <footer className="footer">
         <div className="footer-inner shell">
-          <p>© {year} George Owen Kivumbi. Built with intention.</p>
+          <p>© {year} George Kivumbi. Built with intention.</p>
           <p>SDET · Mbarara, Uganda</p>
         </div>
       </footer>

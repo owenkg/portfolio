@@ -116,26 +116,23 @@ export default function App() {
             <span className="label">SDET</span>
           </aside>
 
-          <div>
+          <div className="hero-main">
             <div className="hero-title-wrap">
-              <div className="hero-title-block">
-                <p className="eyebrow label">Hello, I'm</p>
-                <h1 className="hero-title">
-                  George
-                  <br />
-                  <span>Kivumbi.</span>
-                </h1>
-              </div>
+              <p className="eyebrow label">Hello, I'm</p>
+              <h1 className="hero-title">
+                George
+                <br />
+                <span>Kivumbi.</span>
+              </h1>
+            </div>
 
-              {/* Newspaper cutout portrait — hidden on mobile via CSS */}
-              <div className="hero-portrait-wrap" aria-hidden="true">
-                <img
-                  src="portfolio_photo_clean.png"
-                  alt="George Kivumbi"
-                  width="600"
-                  height="600"
-                />
-              </div>
+            <div className="hero-portrait-wrap" aria-hidden="true">
+              <img
+                src="portfolio_photo_clean.png"
+                alt="George Kivumbi"
+                width="600"
+                height="600"
+              />
             </div>
 
             <div className="hero-bottom">

@@ -138,16 +138,6 @@ body::after {
   border-bottom: 1px solid var(--rule);
 }
 
-.hero::after {
-  position: absolute;
-  z-index: -2;
-  right: -15%;
-  bottom: -30%;
-  width: 75vw;
-  height: 65vh;
-  background: radial-gradient(ellipse, rgba(212, 184, 138, 0.38), transparent 69%);
-  content: "";
-}
 
 .nav {
   display: grid;

@@ -285,22 +285,6 @@ a {
   line-height: 1.65;
 }
 
-.scroll-note {
-  position: absolute;
-  right: 28px;
-  bottom: 42px;
-  display: flex;
-  align-items: center;
-  gap: 13px;
-  color: var(--umber);
-  font-family: var(--font-mono);
-  font-size: 0.61rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  transform: rotate(90deg) translateX(100%);
-  transform-origin: right bottom;
-}
-
 .page-section {
   border-bottom: 1px solid var(--rule);
 }
@@ -809,10 +793,6 @@ a {
 
   .role-stamp {
     font-size: 0.57rem;
-  }
-
-  .scroll-note {
-    display: none;
   }
 
   .section-kicker {

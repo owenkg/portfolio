@@ -156,9 +156,6 @@ export default function App() {
           </div>
         </div>
 
-        <span className="scroll-note label" aria-hidden="true">
-          Scroll to explore
-        </span>
       </header>
 
       {/* ─── WORK ─── */}
